@@ -1,11 +1,26 @@
 div.header {
+  position: fixed;
+  place-content: center space-around;
   display: flex;
+  flex-flow: row wrap;
+  align-items: center;
   justify-content: center;
+  vertical-align: center;
   height: 60px;
   top: 0;
   left: 0;
   background: rgb(255, 102, 0);
   width: 100%;
+  min-width: 60px;
+}
+div.block {
+  place-content: center space-around;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  vertical-align: center;
+  padding-top: 24px;
 }
 header.header h3.title {
   color: rgb(255, 255, 255);
@@ -15,8 +30,9 @@ body.body {
   background-color: rgb(231, 231, 231);
 }
 div.weeks {
+  width: 100%;
   padding-top: 20px;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 60px);
   place-content: center space-around;
   display: flex;
   flex-flow: row wrap;
@@ -42,26 +58,27 @@ div.card {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   div.card {
-    margin-bottom: 0;
-    min-width: 90%;
+    margin-bottom: 4px;
+    min-width: 95%;
     max-width: 400px;
     max-height: 88vh;
   }
   div.weeks {
-    padding-top: 0px;
+    padding-top: 35px;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   div.card {
-    margin-bottom: 0;
-    min-width: 90%;
+    margin-bottom: 5px;
+    min-width: 45%;
     max-width: 400px;
+    min-height: 260px;
     max-height: 88vh;
   }
   div.weeks {
-    padding-top: 0px;
+    padding-top: 45px;
   }
 }
 
@@ -75,27 +92,32 @@ div.card {
     max-height: 88vh;
   }
   div.weeks {
-    padding-top: 10px;
+    padding-top: 45px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    div.card {
-        margin: 20px;
-        min-width: 45%;
-        max-width: 400px;
-        max-height: 290px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 25px;
-      }
-      div.weeks {
-        padding-top: 20px;
-      }
+  div.card {
+    margin: 20px;
+    min-height: 320px;
+    min-width: 40%;
+    max-width: 350px;
+    max-height: 290px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+  }
+  div.weeks {
+    padding-top: 50px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  div.header {
+    height: 10%;
+    min-height: 60px;
+  }
   div.card {
     margin: 20px;
     min-width: 30%;
@@ -105,6 +127,6 @@ div.card {
     border-radius: 25px;
   }
   div.weeks {
-    padding-top: 20px;
+    padding-top: 60px;
   }
 }
